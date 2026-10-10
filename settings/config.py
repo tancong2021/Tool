@@ -13,6 +13,17 @@ class Config:
         self.USERNAME = "XXXXXX"
         self.PASSWORD = "XXXX"
 
+        self.PUBLIC_KEY = PUBLIC_KEY = """-----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAquI4cHpCD/KY0iK8Zf4r
+        3UmYtcUrAjEvhm5qeE9uAmjSgX2t2J0+YV1cF/XWywHLRV3b0RDfNq32fMy8xiX3
+        z3rkt4ykfjoUmZgOqCfUAp5FGaOJrJ5k71zV7u/X3P7/g1nKaUpamBB5Pv9CWcZp
+        zvJjguF9DgbkDNK13ncM9T0c7YdG+D9gQlUb3YWBIKsFNGBL3z+sl33CmiETzcS3
+        qlQg0BB/repkAQLqKB9AqLnYbJ8XwY/WU4GcsC+0bKPIoXz4eMHdDA2prtV7Y+sJ
+        JedfHhrJnHbZAZMkERHH12X1N7kuAS6kWK2hLqC1FQu6OQIaZZ9gsUMXTV8P6B+y
+        HwIDAQAB
+        -----END PUBLIC KEY-----"""
+
+
         # ================================ 路径配置 ======================================
         if getattr(sys, 'frozen', False):
             self.BASE_DIR = Path(sys.executable).parent
