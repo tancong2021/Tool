@@ -8,10 +8,10 @@ class Config:
     """配置类"""
     TOKEN_TTL = 12 * 3600          # 本地认为 token 的有效期（秒），按平台实际过期时间改
     MAX_RETRY_ATTEMPTS = 3         # 最大请求次数
-    REQUEST_TIMEOUT = 300          # 单次请求时间(秒)
+    REQUEST_TIMEOUT = 10           # 单次请求时间(秒)
     # ================================ 账号配置 ======================================
-    USERNAME = "XXXXXX"
-    PASSWORD = "XXXX"
+    USERNAME = "13630475265"
+    PASSWORD = "265475"
 
 
     PUBLIC_KEY = PUBLIC_KEY = """-----BEGIN PUBLIC KEY-----

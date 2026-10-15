@@ -50,7 +50,7 @@ class CaptchaHandler:
         except Exception as e:
             self.logger.warning(f"=> OCR 验证码初始化失败: {e}")
         else:
-            self.logger.info("=> 0CR 验证码识别已启用")
+            self.logger.info("=> OCR 验证码识别已启用")
             return ocr
         return None
 
@@ -67,20 +67,20 @@ class CaptchaHandler:
         response.raise_for_status()
         data = response.json()
         if data.get('code') != 200:
-            raise RuntimeError(f"=> 获取验证码失败: {data}")
+            raise RuntimeError(f"=> 获取验证码图片失败: {data}")
 
         captcha_uuid = data['uuid']
         img_bytes = base64.b64decode(data['img'])
-        self.logger.info(f"验证码获取成功, captcha_uuid: {captcha_uuid[:16]}...")
+        self.logger.info(f"验证码图片获取成功, captcha_uuid: {captcha_uuid[:16]}...")
 
         code = None if force_manual else self._auto_solve(img_bytes)
         if code is None:
             path = self._save_image(img_bytes)
-            self._open_image(path)
+            self._open_captcha_image(path)
             code = self._ask_user(path)
 
         if not code:
-            raise ValueError("验证码不能为空")
+            raise ValueError("=> 验证码不能为空")
         return captcha_uuid, code
 
     # ---------- 自动识别 ----------
@@ -115,13 +115,19 @@ class CaptchaHandler:
         Path(path).write_bytes(img_bytes)
         return path
 
-    def _open_image(self, path):
+    def _open_captcha_image(self, captcha_path):
+        """自动打开验证码图片
+        Args:
+            captcha_path: 验证码图片路径
+        """
         try:
             if sys.platform == 'win32':
-                os.startfile(str(path))
+                os.startfile(str(captcha_path))
+            elif sys.platform == 'darwin':
+                subprocess.run(['open', str(captcha_path)])
             else:
-                cmd = 'open' if sys.platform == 'darwin' else 'xdg-open'
-                subprocess.run([cmd, str(path)], check=False)
+                subprocess.run(['xdg-open', str(captcha_path)])
+            self.logger.debug("=> 已自动打开验证码图片")
         except Exception as e:
             self.logger.warning(f"=> 无法自动打开验证码图片: {e}")
 
@@ -135,6 +141,6 @@ class CaptchaHandler:
         return input("=> 请输入验证码答案: ").strip()
 
 if __name__ == '__main__':
-    CaptchaHandler = CaptchaHandler()
-    captcha_uuid, code = CaptchaHandler.get_captcha()
+    captchaHandler = CaptchaHandler()
+    captcha_uuid, code = captchaHandler.get_captcha()
     print(code)

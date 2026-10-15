@@ -4,5 +4,5 @@
 
 
 
-from core.login import LoginManager
-__all__ = ['LoginManager']
+from core.login import LoginManager, CaptchaHandler
+__all__ = ['LoginManager', 'CaptchaHandler']

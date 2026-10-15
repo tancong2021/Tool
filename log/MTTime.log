@@ -1,3 +1,242 @@
 2026-10-15 15:10:50 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
 2026-10-15 15:10:50 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
 2026-10-15 15:10:50 [INFO    ] login.py:31 登录管理器初始化完成, 用户: username
+2026-10-15 18:12:42 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:12:42 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:12:42 [CRITICAL] logger.py:71 未捕获的异常
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 119, in <module>
+    login_manager = LoginManager(Config.USERNAME, Config.PASSWORD)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Tools\core\login.py", line 27, in __init__
+    self.token = self.load_token()
+                 ^^^^^^^^^^^^^^^
+AttributeError: 'LoginManager' object has no attribute 'load_token'
+2026-10-15 18:13:22 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:13:22 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:13:22 [INFO    ] captcha.py:53 => 0CR 验证码识别已启用
+2026-10-15 18:13:22 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:13:44 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:13:44 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:13:44 [INFO    ] captcha.py:53 => 0CR 验证码识别已启用
+2026-10-15 18:13:44 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:13:44 [INFO    ] login.py:37 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:13:44 [ERROR   ] login.py:78 => 用户登录异常: type object 'Config' has no attribute 'MAX_RETRY'
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 39, in login
+    self.logger.info(f"开始第 {attempt + 1}/{Config.MAX_RETRY} 次登录尝试")
+                                             ^^^^^^^^^^^^^^^^
+AttributeError: type object 'Config' has no attribute 'MAX_RETRY'
+2026-10-15 18:13:44 [INFO    ] login.py:37 => 开始第 2/3 次用户登录尝试
+2026-10-15 18:13:44 [ERROR   ] login.py:78 => 用户登录异常: type object 'Config' has no attribute 'MAX_RETRY'
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 39, in login
+    self.logger.info(f"开始第 {attempt + 1}/{Config.MAX_RETRY} 次登录尝试")
+                                             ^^^^^^^^^^^^^^^^
+AttributeError: type object 'Config' has no attribute 'MAX_RETRY'
+2026-10-15 18:13:44 [INFO    ] login.py:37 => 开始第 3/3 次用户登录尝试
+2026-10-15 18:13:44 [ERROR   ] login.py:78 => 用户登录异常: type object 'Config' has no attribute 'MAX_RETRY'
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 39, in login
+    self.logger.info(f"开始第 {attempt + 1}/{Config.MAX_RETRY} 次登录尝试")
+                                             ^^^^^^^^^^^^^^^^
+AttributeError: type object 'Config' has no attribute 'MAX_RETRY'
+2026-10-15 18:14:00 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:14:00 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:14:00 [INFO    ] captcha.py:53 => 0CR 验证码识别已启用
+2026-10-15 18:14:00 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:14:00 [INFO    ] login.py:37 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:14:00 [INFO    ] login.py:39 开始第 1/3 次登录尝试
+2026-10-15 18:14:00 [INFO    ] captcha.py:74 验证码获取成功, captcha_uuid: 128ae1dbd65f42b3...
+2026-10-15 18:14:00 [WARNING ] captcha.py:95 => OCR 结果无法解析: '317'
+2026-10-15 18:14:05 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:14:05 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:14:06 [DEBUG   ] login.py:64 HTTP状态码: 200
+2026-10-15 18:14:06 [DEBUG   ] login.py:68 响应: None
+2026-10-15 18:14:06 [INFO    ] login.py:37 => 开始第 2/3 次用户登录尝试
+2026-10-15 18:14:06 [INFO    ] login.py:39 开始第 2/3 次登录尝试
+2026-10-15 18:14:06 [INFO    ] captcha.py:74 验证码获取成功, captcha_uuid: 9aa838302edb479c...
+2026-10-15 18:14:06 [WARNING ] captcha.py:95 => OCR 结果无法解析: '5lm'
+2026-10-15 18:14:17 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:14:17 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:14:17 [DEBUG   ] login.py:64 HTTP状态码: 200
+2026-10-15 18:14:17 [DEBUG   ] login.py:68 响应: None
+2026-10-15 18:14:17 [INFO    ] login.py:37 => 开始第 3/3 次用户登录尝试
+2026-10-15 18:14:17 [INFO    ] login.py:39 开始第 3/3 次登录尝试
+2026-10-15 18:14:17 [INFO    ] captcha.py:74 验证码获取成功, captcha_uuid: 09e8ccc80f8644c8...
+2026-10-15 18:14:17 [INFO    ] captcha.py:97 => OCR 识别: '3-03' -> 0
+2026-10-15 18:14:17 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:14:17 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:14:17 [DEBUG   ] login.py:64 HTTP状态码: 200
+2026-10-15 18:14:17 [DEBUG   ] login.py:68 响应: 验证码错误
+2026-10-15 18:22:32 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:22:32 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:22:32 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:22:32 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:22:32 [INFO    ] login.py:37 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:22:32 [INFO    ] captcha.py:74 验证码获取成功, captcha_uuid: dde247de4a7b4d4b...
+2026-10-15 18:22:32 [INFO    ] captcha.py:97 => OCR 识别: '7*77' -> 539
+2026-10-15 18:22:32 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:22:32 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:22:32 [DEBUG   ] login.py:63 HTTP状态码: 200
+2026-10-15 18:22:32 [DEBUG   ] login.py:67 响应: 验证码错误
+2026-10-15 18:22:32 [INFO    ] login.py:37 => 开始第 2/3 次用户登录尝试
+2026-10-15 18:22:32 [INFO    ] captcha.py:74 验证码获取成功, captcha_uuid: 8f2cbb85df4e4392...
+2026-10-15 18:22:32 [WARNING ] captcha.py:95 => OCR 结果无法解析: '2193'
+2026-10-15 18:22:46 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:22:46 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:22:47 [DEBUG   ] login.py:63 HTTP状态码: 200
+2026-10-15 18:22:47 [DEBUG   ] login.py:67 响应: None
+2026-10-15 18:28:22 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:28:22 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:28:22 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:28:22 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:28:22 [INFO    ] login.py:37 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:28:23 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 4238eccb6abd4098...
+2026-10-15 18:28:30 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:28:30 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:28:30 [DEBUG   ] login.py:63 HTTP状态码: 200
+2026-10-15 18:28:30 [DEBUG   ] login.py:67 响应: None
+2026-10-15 18:36:32 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:36:32 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:36:32 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:36:32 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:36:32 [INFO    ] login.py:37 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:36:32 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 178f9eb945a94dda...
+2026-10-15 18:36:32 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:36:38 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:36:38 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:36:38 [INFO    ] login.py:55 => 用户登录参数准备完成
+2026-10-15 18:36:38 [DEBUG   ] login.py:63 HTTP状态码: 200
+2026-10-15 18:36:38 [DEBUG   ] login.py:67 响应: None
+2026-10-15 18:40:15 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:40:15 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:40:15 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:40:15 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:40:15 [INFO    ] login.py:37 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:40:16 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 79ac16b1143a4522...
+2026-10-15 18:40:16 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:40:22 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:40:22 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:40:22 [INFO    ] login.py:55 => 用户登录参数准备完成
+2026-10-15 18:40:22 [INFO    ] login.py:58 => 正在发送登录请求...
+2026-10-15 18:40:23 [INFO    ] login.py:64 => 收到响应: HTTP 200
+2026-10-15 18:40:23 [DEBUG   ] login.py:68 响应: None
+2026-10-15 18:42:16 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:42:16 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:42:17 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:42:17 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:42:17 [INFO    ] login.py:37 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:42:17 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: f5b8b8c589a74cc3...
+2026-10-15 18:42:17 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:42:23 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:42:23 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:42:23 [INFO    ] login.py:55 => 用户登录参数准备完成
+2026-10-15 18:42:23 [INFO    ] login.py:58 => 正在发送登录请求...
+2026-10-15 18:42:23 [INFO    ] login.py:68 => 响应: code=200, msg=None
+2026-10-15 18:42:23 [INFO    ] login.py:74 => 登录成功
+2026-10-15 18:45:35 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:45:35 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:45:35 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:45:35 [INFO    ] login.py:31 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:45:35 [INFO    ] login.py:37 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:45:36 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 60c120c76ec04848...
+2026-10-15 18:45:36 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:45:40 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:45:40 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:45:40 [INFO    ] login.py:55 => 用户登录参数准备完成
+2026-10-15 18:45:40 [INFO    ] login.py:58 => 正在发送登录请求...
+2026-10-15 18:45:40 [INFO    ] login.py:68 => 响应: code=200, msg=None
+2026-10-15 18:45:40 [ERROR   ] login.py:78 => 用户登录异常: 'LoginManager' object has no attribute 'extract_token'
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 69, in login
+    self.token = self.extract_token(result)
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'LoginManager' object has no attribute 'extract_token'
+2026-10-15 18:45:40 [INFO    ] login.py:37 => 开始第 2/3 次用户登录尝试
+2026-10-15 18:45:40 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 2bd494ae9eb44b43...
+2026-10-15 18:45:40 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:45:48 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:45:48 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:45:48 [INFO    ] login.py:55 => 用户登录参数准备完成
+2026-10-15 18:45:48 [INFO    ] login.py:58 => 正在发送登录请求...
+2026-10-15 18:45:49 [INFO    ] login.py:68 => 响应: code=200, msg=None
+2026-10-15 18:45:49 [ERROR   ] login.py:78 => 用户登录异常: 'LoginManager' object has no attribute 'extract_token'
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 69, in login
+    self.token = self.extract_token(result)
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'LoginManager' object has no attribute 'extract_token'
+2026-10-15 18:45:49 [INFO    ] login.py:37 => 开始第 3/3 次用户登录尝试
+2026-10-15 18:45:49 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 00e37c1f5c9b4d4b...
+2026-10-15 18:45:49 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:45:53 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:45:53 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:45:53 [INFO    ] login.py:55 => 用户登录参数准备完成
+2026-10-15 18:45:53 [INFO    ] login.py:58 => 正在发送登录请求...
+2026-10-15 18:45:53 [INFO    ] login.py:68 => 响应: code=200, msg=None
+2026-10-15 18:45:53 [ERROR   ] login.py:78 => 用户登录异常: 'LoginManager' object has no attribute 'extract_token'
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 69, in login
+    self.token = self.extract_token(result)
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'LoginManager' object has no attribute 'extract_token'
+2026-10-15 18:49:33 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:49:33 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:49:33 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:49:33 [INFO    ] login.py:66 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:49:33 [INFO    ] login.py:72 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:49:33 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: cc825c13e3654f48...
+2026-10-15 18:49:33 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:49:37 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:49:37 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:49:37 [INFO    ] login.py:90 => 用户登录参数准备完成
+2026-10-15 18:49:37 [INFO    ] login.py:93 => 正在发送登录请求...
+2026-10-15 18:49:37 [INFO    ] login.py:103 => 响应: code=200, msg=None
+2026-10-15 18:49:37 [ERROR   ] login.py:113 => 用户登录异常: => 登录返回里没有 token: ***'code': 200, 'msg': None, 'data': {'access_token': '***', 'expires_in': 720}}
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 104, in login
+    self.token = self.extract_token(result)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Tools\core\login.py", line 46, in extract_token
+    raise RuntimeError(f"=> 登录返回里没有 token: {result}")
+RuntimeError: => 登录返回里没有 token: {'code': 200, 'msg': None, 'data': {'access_token': 'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjozOTMsInVzZXJfa2V5IjoiZTcwYWE0OGUtNzM2Ny00ZWU3LWFkOWUtNmExMzY2YjNjMDgyIiwidXNlcm5hbWUiOiIxMzYzMDQ3NTI2NSJ9.j5gEqLINjWu1S4IO80oxmp2JIycO8avuh8uqkV6KyGA6idR72cwH_98ksVW23_4R0vnziYEXDOrCRuuMl7tHbQ', 'expires_in': 720}}
+2026-10-15 18:49:37 [INFO    ] login.py:72 => 开始第 2/3 次用户登录尝试
+2026-10-15 18:49:37 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 7b3c7d4f7a94486f...
+2026-10-15 18:49:37 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:50:20 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:50:20 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:50:20 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:50:20 [INFO    ] login.py:66 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:50:20 [INFO    ] login.py:72 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:50:20 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 72dc26fbde734701...
+2026-10-15 18:50:20 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:50:25 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:50:25 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:50:25 [INFO    ] login.py:90 => 用户登录参数准备完成
+2026-10-15 18:50:25 [INFO    ] login.py:93 => 正在发送登录请求...
+2026-10-15 18:50:25 [INFO    ] login.py:103 => 响应: code=200, msg=None
+2026-10-15 18:50:25 [ERROR   ] login.py:113 => 用户登录异常: => 登录返回里没有 token: ***'code': 200, 'msg': None, 'data': {'access_token': '***', 'expires_in': 720}}
+Traceback (most recent call last):
+  File "D:\Tools\core\login.py", line 104, in login
+    self.token = self.extract_token(result)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Tools\core\login.py", line 46, in extract_token
+    raise RuntimeError(f"=> 登录返回里没有 token: {result}")
+RuntimeError: => 登录返回里没有 token: {'code': 200, 'msg': None, 'data': {'access_token': 'eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjozOTMsInVzZXJfa2V5IjoiZDQ1MmM4NzYtMjEzYS00ZTdkLTlmMGEtODMyZDRjNzllZWVhIiwidXNlcm5hbWUiOiIxMzYzMDQ3NTI2NSJ9.3jmxo7p9w5_JXt9DQq8I6d4PZtv8KQbgbaUTWOVHweIcdVzlI55HMoWcRueJKrmVQCsqM4MUsr2a1DV6EotQEA', 'expires_in': 720}}
+2026-10-15 18:50:25 [INFO    ] login.py:72 => 开始第 2/3 次用户登录尝试
+2026-10-15 18:50:25 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: 041d3c2b68b14c64...
+2026-10-15 18:50:25 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:51:27 [INFO    ] logger.py:75 => 日志文件路径: D:\Tools\log\MTTime.log
+2026-10-15 18:51:27 [DEBUG   ] encryptor.py:25 => RSA加密器初始化完成...
+2026-10-15 18:51:27 [INFO    ] captcha.py:53 => OCR 验证码识别已启用
+2026-10-15 18:51:27 [INFO    ] login.py:66 登录管理器初始化完成, 用户: 13630475265
+2026-10-15 18:51:27 [INFO    ] login.py:72 => 开始第 1/3 次用户登录尝试
+2026-10-15 18:51:27 [INFO    ] captcha.py:74 验证码图片获取成功, captcha_uuid: b6ffaf6dbf484d49...
+2026-10-15 18:51:27 [DEBUG   ] captcha.py:130 => 已自动打开验证码图片
+2026-10-15 18:51:32 [DEBUG   ] encryptor.py:37 => 开始RSA加密数据...
+2026-10-15 18:51:32 [DEBUG   ] encryptor.py:51 => 数据加密完成，长度: 344 字符
+2026-10-15 18:51:32 [INFO    ] login.py:90 => 用户登录参数准备完成
+2026-10-15 18:51:32 [INFO    ] login.py:93 => 正在发送登录请求...
+2026-10-15 18:51:32 [INFO    ] login.py:103 => 响应: code=200, msg=None
+2026-10-15 18:51:32 [INFO    ] login.py:108 => 登录成功
