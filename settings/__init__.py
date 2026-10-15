@@ -2,5 +2,5 @@
 导入模块
 """
 
-from .config import Config
+from settings.config import Config
 __all__ = ['Config']

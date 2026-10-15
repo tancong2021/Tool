@@ -12,7 +12,7 @@ import sys
 from logging.handlers import TimedRotatingFileHandler
 from pathlib import Path
 
-
+from settings import Config
 
 
 class SensitiveFilter(logging.Filter):
@@ -32,7 +32,7 @@ class SensitiveFilter(logging.Filter):
 
 def setup_logger(log_dir=None, name='MTTime', level=logging.INFO, log_prefix='MTTime', keep_days=30):
     """设置日志系统，返回 logger（重复调用安全，不会重复输出）"""
-    log_path = Path(log_dir) if log_dir else Path.cwd() / "logs"
+    log_path = Path(log_dir) if log_dir else Config.LOG_DIR
     log_path.mkdir(parents=True, exist_ok=True)
 
     logger = logging.getLogger(name)
@@ -72,10 +72,19 @@ def setup_logger(log_dir=None, name='MTTime', level=logging.INFO, log_prefix='MT
 
     sys.excepthook = _log_uncaught
 
-    logger.info(f"日志文件路径: {log_file}")
+    logger.info(f"=> 日志文件路径: {log_file}")
     return logger
 
 
 def get_logger(name='MTTime'):
     """获取已配置好的 logger（在其他模块里用）"""
     return logging.getLogger(name)
+
+
+if __name__ == '__main__':
+    setup_logger()
+    logger = get_logger()
+    logger.debug('debug')
+    logger.info('info')
+    logger.warning('warning')
+    logger.error('error')
