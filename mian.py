@@ -5,8 +5,11 @@ from Crypto.PublicKey import RSA
 
 from settings import Config
 
+config = Config()
 
 def main():
+    config = Config()
+
     pass
 
 
@@ -14,6 +17,4 @@ def main():
 
 
 if __name__ == "__main__":
-    config = Config()
-    main()
-    print(RSA.import_key(config.PUBLIC_KEY))
+    Config.ensure_dirs()

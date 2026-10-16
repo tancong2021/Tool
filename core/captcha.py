@@ -35,7 +35,7 @@ class CaptchaHandler:
     """验证码处理器：优先 OCR 自动识别，失败再人工输入"""
 
     def __init__(self, session=None):
-        self.session = session or requests.Session()
+        self.session = session if session is not None else requests.Session()
         self.logger = get_logger()
         self.console = Console()
         self.ocr = self._init_ocr()

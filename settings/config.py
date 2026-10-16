@@ -24,6 +24,15 @@ class Config:
         HwIDAQAB
         -----END PUBLIC KEY-----"""
 
+    # 所有请求共用的头
+    BASE_HEADERS = {
+        "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                       "(KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"),
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "zh,zh-CN;q=0.9,en;q=0.8",
+        "lang": "zh-CN",
+    }
+
 
     # ================================ 路径配置 ======================================
     if getattr(sys, 'frozen', False):
@@ -37,7 +46,7 @@ class Config:
     BASE_API_URL = "https://mtime.ngu-u.com"
     LOGIN_API_URL = f"{BASE_API_URL}/adminApi/auth/login/v2"
     CAPTCHA_API_URL = f"{BASE_API_URL}/adminApi/code"
-    ATTENDANCE_API_URL = f"{BASE_API_URL}/adminApi/system/mtime/user/list"
+    USER_API_URL = f"{BASE_API_URL}/adminApi/system/mtime/user/list"
     CAPTCHA_IMG_DIR = BASE_DIR / "captcha"
     LOG_DIR = BASE_DIR / "log"
 

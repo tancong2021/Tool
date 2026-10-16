@@ -32,7 +32,7 @@ class LoginManager:
             str | None: token，登录失败返回 None
         """
         if not force and self.token:
-            self.logger.info("=> 使用本地缓存 token，无需登录")
+            self.logger.info("=> 使用本地缓存 token，无需登录获取")
             return self.token
         return self.token if self.login() else None
 
@@ -119,6 +119,10 @@ class LoginManager:
         """接口返回 401 时调用，丢掉失效的 token"""
         self.token = ""
         Config.TOKEN_FILE_PATH.unlink(missing_ok=True)
+
+    def get_login_session(self):
+        """获取session对象"""
+        return self.session
 
 
 if __name__ == "__main__":
