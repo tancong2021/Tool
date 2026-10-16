@@ -1,0 +1,9 @@
+.idea/
+log/
+output/
+token
+token.json
+settings/config.py
+.env
+__pycache__/
+*.pyc
